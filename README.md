@@ -63,8 +63,4 @@ For support, questions, or feedback regarding the grant-finder-ai Crew or crewAI
 
 Let's empower nonprofits together with AI-driven grant discovery!
 
-```
-
----
-
 If you want, I can also help you generate a full LICENSE file or CONTRIBUTING guide!
