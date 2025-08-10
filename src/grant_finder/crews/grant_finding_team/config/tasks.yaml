@@ -1,0 +1,50 @@
+research_task:
+  description: >
+    Using the organization's profile below, research and find a list of potential funding sources.
+
+    Organization Profile:
+    {org_description}
+
+    Your output should be a detailed textual list of minimum 10 funding sources including:
+    - Organization name
+    - Webpage link
+    - Description
+    - Eligibility criteria (who can apply)
+
+    Use web search (Serper tool) as needed to find relevant, up-to-date sources.
+
+  expected_output: >
+    Text summary list of funding sources with details and eligibility criteria.
+  agent: ResearchAgent
+
+eligibility_task:
+  description: >
+    Given the organization's profile and the list of funding sources found (including eligibility criteria),
+    filter the sources to only those for which the organization is eligible.
+
+    Organization Profile:
+    {org_description}
+
+    Funding Sources:
+    {selected_sources}
+
+    Your output should be a textual filtered list of at least 3 funding sources where the organization meets eligibility.
+
+  expected_output: >
+    Text filtered list of eligible funding sources.
+  agent: EligibilityAgent
+
+report_task:
+  description: >
+    Using the filtered list of eligible funding sources, generate a detailed markdown report.
+
+    The report should include:
+    - Introduction with organization name and profile summary
+    - Detailed list of eligible funding sources with names, links, descriptions, and eligibility notes
+    - A summary conclusion
+
+    Format the report cleanly using Markdown syntax.
+
+  expected_output: >
+    Markdown formatted report summarizing eligible funding sources.
+  agent: ReportAgent
